@@ -1,28 +1,12 @@
-import { apiUpload } from './api';
+// API utility import removed as it's no longer used for file uploading directly here
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY || '';
-
-export interface ConvertResult {
-  data: string;
-  format: 'csv' | 'json';
-  filename: string;
-}
 
 /**
  * Service for file conversion operations (CSV ↔ JSON)
  */
 export const convertService = {
-  /**
-   * Convert a file from one format to another
-   */
-  async convertFile(
-    file: File,
-    targetFormat: 'csv' | 'json'
-  ): Promise<ConvertResult> {
-    return apiUpload('/convert', file, { targetFormat });
-  },
-
   /**
    * Convert CSV file to JSON
    */
@@ -66,17 +50,6 @@ export const convertService = {
       throw new Error(errorData.message || `Failed to convert JSON to CSV: ${response.statusText}`);
     }
 
-    return response.blob();
-  },
-
-  /**
-   * Download converted file
-   */
-  async downloadConvertedFile(jobId: string): Promise<Blob> {
-    const response = await fetch(`/api/convert/${jobId}/download`);
-    if (!response.ok) {
-      throw new Error('Failed to download file');
-    }
     return response.blob();
   },
 };

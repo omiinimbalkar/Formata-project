@@ -1,4 +1,4 @@
-import { apiRequest } from './api';
+// Preview data interfaces
 
 export interface PreviewData {
   records: Array<Record<string, any>>;
@@ -22,25 +22,4 @@ export interface FilterParams {
   };
 }
 
-/**
- * Service for preview operations
- */
-export const previewService = {
-  /**
-   * Fetch preview data for a job
-   */
-  async getPreviewData(jobId: string): Promise<PreviewData> {
-    return apiRequest<PreviewData>(`/preview/${jobId}`);
-  },
-
-  /**
-   * Apply filters to preview data
-   */
-  async applyFilters(jobId: string, filters: FilterParams): Promise<PreviewData> {
-    return apiRequest<PreviewData>(`/preview/${jobId}/filter`, {
-      method: 'POST',
-      body: JSON.stringify(filters),
-    });
-  },
-};
 
