@@ -1,0 +1,122 @@
+Great 🔥 this is a professional-level project, and I’ll guide you step-by-step like a real developer workflow.
+
+You want:
+👉 Clone project
+👉 Install everything
+👉 Run it
+👉 Make changes
+👉 Push to your repo
+
+Let’s do it cleanly 👇
+
+🚀 1. Clone the Project
+git clone https://github.com/JadhavAnsh/Formata.git
+cd Formata
+🧠 2. Understand Languages Used
+🔹 Backend
+Language: Python 🐍
+Framework: FastAPI
+Libraries: Pandas, NumPy, Pydantic
+🔹 Frontend
+Language: TypeScript
+Framework: Next.js (React)
+Styling: Tailwind CSS
+
+👉 So basically:
+
+Backend = Python
+Frontend = JavaScript/TypeScript
+⚙️ 3. Install Required Software
+
+Make sure you have:
+
+✅ Install these first:
+Python 3.10+
+Node.js 18+
+Git
+
+Check:
+
+python --version
+node -v
+git --version
+🔧 4. Setup Backend (Python)
+cd backend
+🔹 Create virtual environment (important)
+python -m venv venv
+🔹 Activate it
+
+Windows:
+
+venv\Scripts\activate
+
+Mac/Linux:
+
+source venv/bin/activate
+🔹 Install dependencies
+pip install -r requirements.txt
+🔹 Create .env file
+
+Create file manually OR:
+
+echo API_KEY=123456 > .env
+
+(Add more later if needed)
+
+🔹 Run backend
+uvicorn app.main:app --reload
+
+👉 Runs at:
+http://localhost:8000
+
+💻 5. Setup Frontend
+
+Open new terminal:
+
+cd frontend
+🔹 Install packages
+npm install
+🔹 Create .env.local
+echo NEXT_PUBLIC_API_URL=http://localhost:8000 > .env.local
+🔹 Run frontend
+npm run dev
+
+👉 Runs at:
+http://localhost:3000
+
+✏️ 6. Make Changes
+
+Now you can edit:
+
+🔹 Frontend changes
+UI → frontend/components/
+Pages → frontend/app/
+🔹 Backend changes
+Logic → backend/app/services/
+API → backend/app/api/
+🔁 7. Push to YOUR GitHub Repo
+🔹 Remove old repo
+git remote remove origin
+🔹 Add your repo
+git remote add origin https://github.com/YOUR-USERNAME/formata.git
+🔹 Push
+git add .
+git commit -m "My changes"
+git push -u origin main
+🔥 8. Pro Tips (Very Important)
+
+✔ Don’t modify everything — focus on:
+
+UI improvements
+Add 1–2 smart features
+
+✔ Best files to edit:
+
+components (UI)
+services (logic)
+🏆 If you want to win competition
+
+I suggest:
+👉 Add “Smart Suggestions Panel”
+👉 Improve UI (colors, animations)
+👉 Show before vs after
