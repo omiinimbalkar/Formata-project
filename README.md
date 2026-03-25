@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 DataRefine AI
+# 🚀 formata
 
 **AI-Powered Data Transformation & Quality Intelligence Platform**
 
@@ -18,7 +18,7 @@
 
 ## 🎯 Overview
 
-**DataRefine AI** is a modern, production-ready data processing platform that transforms messy, unstructured data into clean, validated, and AI-ready datasets.
+**formata** is a modern, production-ready data processing platform that transforms messy, unstructured data into clean, validated, and AI-ready datasets.
 
 Built using **FastAPI** and **Next.js**, it provides a complete pipeline for data ingestion, cleaning, transformation, validation, and quality assurance with real-time tracking and detailed error reporting.
 
